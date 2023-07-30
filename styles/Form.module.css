@@ -32,6 +32,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   width: calc(65% - 20px);
+  
 }
 
 .p {
@@ -232,4 +233,19 @@
   color: red;
   font-size: 12px;
   margin-top: 5px;
+}
+@media screen and (max-width: 1024px) {
+  .form{
+    width: calc(80% - 20px);
+  }
+}
+@media screen and (max-width:768px) {
+  .form{
+    width: 24.13rem;
+  }
+}
+@media screen and (max-width:614px) {
+  .form{
+    width: 28.13rem;
+  }
 }

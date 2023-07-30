@@ -10,7 +10,17 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function RefinanciamentoVeiculo() {
   const scrollToForm = () => {
-    scroll.scrollTo(1800);
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1440) {
+      scroll.scrollTo(1700);
+    } else if (screenWidth === 1024) {
+      scroll.scrollTo(2150);
+    } else if (screenWidth === 768) {
+      scroll.scrollTo(2700);
+    } else {
+      scroll.scrollTo(2950);
+    }
   };
   return (
     <div>
@@ -164,16 +174,7 @@ export default function RefinanciamentoVeiculo() {
             </div>
           </div>
         </section>
-        {/* <section className={styles.refinport}>
-          <div className={styles.back}>
-            <h2 className={styles.form__h1}>Refinanciamento e Portabilidade</h2>
-            <p className={styles.form__p}>
-              Você já possui um empréstimo consignado? <br></br> Aproveite agora
-              mesmo simulando refinanciamento e portabilidade, duas alternativas
-              incríveis para liberar crédito sem mexer na sua parcela atual.
-            </p>
-          </div>
-        </section> */}
+
         <FormMain></FormMain>
 
         <Faq pageType="refinanciamentoveiculo"></Faq>

@@ -212,3 +212,14 @@
 .privacy__link:hover {
   color: #777;
 }
+
+@media screen and (max-width: 768px) {
+  .dacerto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .privacy__text {
+    margin-bottom: 0;
+  }
+}

@@ -6,8 +6,21 @@ import styles from "../../styles/EmprestimoPessoal.module.css";
 import Image from "next/image";
 import whats from "../image/whatsapp.webp";
 import Faq from "@/components/Faq";
-
+import { Link, animateScroll as scroll } from "react-scroll";
 export default function Pessoal() {
+  const scrollToForm = () => {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1440) {
+      scroll.scrollTo(2000);
+    } else if (screenWidth === 1024) {
+      scroll.scrollTo(2200);
+    } else if (screenWidth === 768) {
+      scroll.scrollTo(2750);
+    } else {
+      scroll.scrollTo(3200);
+    }
+  };
   return (
     <div>
       <Head>
@@ -29,8 +42,10 @@ export default function Pessoal() {
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Empréstimo Pessoal</h1>
             <p className={styles.heroText}>
-              Encontre a solução financeira ideal para você, uma alternativa para emergencia e pagamentos descomplicados direto na folha de
-              pagamento.
+              Encontre a solução financeira ideal para você aposentado e
+              pensionistas que não possui margem consignavel, uma alternativa
+              para emergencia que fornece pagamentos descomplicados direto no
+              seu salario.
             </p>
 
             <button className={styles.btn}>
@@ -50,10 +65,7 @@ export default function Pessoal() {
               baixas.
             </p>
 
-            <a
-              className={styles.bloco2}
-              href="https://api.whatsapp.com/send?phone=5534991152814"
-            >
+            <a className={styles.bloco2} href="#form" onClick={scrollToForm}>
               <button className={styles.btn2}>Simular emprestimo</button>
             </a>
           </div>
@@ -130,8 +142,6 @@ export default function Pessoal() {
             Vantagens Empréstimo Pessoal
           </h2>
           <div className={styles.valuesContainer}>
-            
-
             <div className={styles.valueCard}>
               <div className={styles.valueCardImg2} alt="Segurança"></div>
               <h3 className={styles.valueCardTitle}>Segurança</h3>
@@ -140,7 +150,6 @@ export default function Pessoal() {
               </p>
             </div>
 
-            
             <div className={styles.valueCard}>
               <div
                 className={styles.valueCardImg4}
@@ -155,10 +164,13 @@ export default function Pessoal() {
         </section>
         <section className={styles.refinport}>
           <div className={styles.back}>
-            
-            <h2 className={styles.form__h1}>Exclusivo para beneficiarios inss </h2>
+            <h2 className={styles.form__h1}>
+              Exclusivo para beneficiarios inss{" "}
+            </h2>
             <p className={styles.form__p}>
-          Quando a emergência bate à porta, estamos aqui para ajudar. Obtenha um empréstimo pessoal rápido e descomplicado para lidar com imprevistos e situações urgentes.
+              Quando a emergência bate à porta, estamos aqui para ajudar.
+              Obtenha um empréstimo pessoal rápido e descomplicado para lidar
+              com imprevistos e situações urgentes.
             </p>
           </div>
         </section>

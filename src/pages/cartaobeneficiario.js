@@ -10,7 +10,17 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function CartaoBeneficiario() {
   const scrollToForm = () => {
-    scroll.scrollTo(2150); 
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1440) {
+      scroll.scrollTo(2000);
+    } else if (screenWidth === 1024) {
+      scroll.scrollTo(2500);
+    } else if (screenWidth === 768) {
+      scroll.scrollTo(3100);
+    } else {
+      scroll.scrollTo(3500);
+    }
   };
   return (
     <div>
@@ -31,7 +41,7 @@ export default function CartaoBeneficiario() {
       <div>
         <section className={styles.hero}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>Cartão beneficiario</h1>
+            <h1 className={styles.heroTitle}>Cartão benefício</h1>
             <p className={styles.heroText}>
               Um cartão de crédito com muitas vantagens e opção de Saque até 70%
               do limite.

@@ -11,7 +11,17 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Fgts() {
   const scrollToForm = () => {
-    scroll.scrollTo(2000);
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1440) {
+      scroll.scrollTo(2000);
+    } else if (screenWidth === 1024) {
+      scroll.scrollTo(2450);
+    } else if (screenWidth === 768) {
+      scroll.scrollTo(3050);
+    } else {
+      scroll.scrollTo(3400);
+    }
   };
   return (
     <div>
@@ -32,9 +42,12 @@ export default function Fgts() {
       <div>
         <section className={styles.hero}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>Antecipação Saque FGTS</h1>
+            <h1 className={styles.heroTitle}>
+              Antecipação <br></br>Saque FGTS
+            </h1>
             <p className={styles.heroText}>
-            Libere seu FGTS antecipadamente, permitindo que o saldo disponível pague suas parcelas automaticamente.
+              Libere seu FGTS antecipadamente, permitindo que o saldo disponível
+              pague suas parcelas automaticamente.
             </p>
 
             <a
@@ -122,8 +135,8 @@ export default function Fgts() {
                 <div className={styles.stepContent}>
                   <h2 className={styles.stepTitle}>Resposta rápida</h2>
                   <p className={styles.stepDescription}>
-                    Após analisar seu pedido e obter a aprovação do convênio,
-                    você receberá o dinheiro em até 24 horas.
+                    Após analisar seu pedido e obter a aprovação, você receberá
+                    o dinheiro em até 24 horas.
                   </p>
                 </div>
               </div>
@@ -179,8 +192,8 @@ export default function Fgts() {
           <div className={styles.back}>
             <h2 className={styles.form__h1}>Antecipe até 7 anos</h2>
             <p className={styles.form__p}>
-              Sabia que a antecipação do saque do FGTS pode ser uma alternativa
-              interessante para imprevistos financeiros? <br></br>
+              A cada ano antecipado, uma parcela do seu próprio saldo é
+              utilizada, liberando mais recursos para você!
             </p>
           </div>
         </section>

@@ -8,14 +8,22 @@ import Image from "next/image";
 import whats from "../image/whatsapp.webp";
 import Faq from "@/components/Faq";
 
-
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function AberturaConta() {
   const scrollToForm = () => {
-    scroll.scrollTo(2000); 
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1440) {
+      scroll.scrollTo(1850);
+    } else if (screenWidth === 1024) {
+      scroll.scrollTo(2300);
+    } else if (screenWidth === 768) {
+      scroll.scrollTo(2800);
+    } else {
+      scroll.scrollTo(3200);
+    }
   };
-  
 
   return (
     <div>
@@ -29,8 +37,6 @@ export default function AberturaConta() {
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
         />
-
-        
       </Head>
 
       <Header></Header>
@@ -40,7 +46,8 @@ export default function AberturaConta() {
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Abertura de Conta</h1>
             <p className={styles.heroText}>
-            Abra sua conta 100% online com facilidade e rapidez, em apenas alguns cliques.
+              Abra sua conta 100% online com facilidade e rapidez, em apenas
+              alguns cliques.
             </p>
 
             <a
@@ -63,12 +70,10 @@ export default function AberturaConta() {
               Siga as instruções e aproveite as vantagens do seu cartão.
             </p>
 
-            <a
-              className={styles.bloco2}
-              href="#form"
-              onClick={scrollToForm}
-            >
-              <button onClick={scrollToForm} className={styles.btn2}>Abrir Conta</button>
+            <a className={styles.bloco2} href="#form" onClick={scrollToForm}>
+              <button onClick={scrollToForm} className={styles.btn2}>
+                Abrir Conta
+              </button>
             </a>
           </div>
           <div className={styles.steps}>
@@ -147,7 +152,10 @@ export default function AberturaConta() {
             </div>
 
             <div className={styles.valueCard}>
-              <div className={styles.valueCardImg3} alt="Chance de crédito"></div>
+              <div
+                className={styles.valueCardImg3}
+                alt="Chance de crédito"
+              ></div>
               <h3 className={styles.valueCardTitle}>Chance de crédito</h3>
               <p className={styles.valueCardText}>
                 Analise possibilidade de crédito!

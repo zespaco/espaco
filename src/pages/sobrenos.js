@@ -39,7 +39,14 @@ export default function Instituicao() {
                 nossas ações.
               </p>
             </div>
-
+            <div class={styles.valueCard}>
+              <div className={styles.Img3} alt="Comprometimento" />
+              <h3>Comprometimento</h3>
+              <p className={styles.p}>
+                Estamos empenhados em oferecer um serviço de qualidade e
+                transparente.
+              </p>
+            </div>
             <div class={styles.valueCard}>
               <div className={styles.Img2} alt="Inovação" />
               <h3>Inovação</h3>
@@ -49,14 +56,7 @@ export default function Instituicao() {
               </p>
             </div>
 
-            <div class={styles.valueCard}>
-              <div className={styles.Img3} alt="Comprometimento" />
-              <h3>Comprometimento</h3>
-              <p className={styles.p}>
-                Estamos empenhados em oferecer um serviço de qualidade e
-                transparente.
-              </p>
-            </div>
+            
           </div>
 
           <h2 className={styles.margin2}>Junte-se a nós</h2>

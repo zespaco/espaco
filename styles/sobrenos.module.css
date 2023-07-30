@@ -167,3 +167,62 @@
   text-align: left;
   font-size: 24px;
 }
+
+@media (max-width: 1024px) {
+  .aboutUs {
+    max-width: 800px;
+  }
+  .valueCard {
+    width: calc(47.33% - 20px);
+  }
+  .mapOverlay {
+    padding-left: 1rem;
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutUs {
+    max-width: 600px;
+  }
+  .valueCard {
+    width: calc(47.33% - 20px);
+    height: 21rem;
+  }
+  .valueCard:last-child {
+    width: 60%;
+  }
+  .smallText {
+    width: 100%;
+  }
+  .valuesContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .mainmapOverlay {
+    flex-direction: column;
+  }
+  .map {
+    width: 100%;
+  }
+  .mapOverlay {
+    padding-top: 2rem;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 614px) {
+  .aboutUs {
+    max-width: 500px;
+  }
+  .valueCard {
+    width: 80%;
+    height: 21rem;
+  }
+  .valueCard:last-child {
+    width: 80%;
+  }
+  .mapOverlay {
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 .hero {
   background-size: cover;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -8,9 +8,9 @@
   color: #1d1d1d;
   position: relative;
   overflow: hidden;
-  align-items: left;
+  align-items: flex-start;
   background-image: url(../src/image/troque-credito.webp);
-  background-position-y: 70%;
+  background-repeat: no-repeat;
 }
 
 .hero::before {
@@ -307,4 +307,139 @@
   height: 100%;
   padding: 1rem;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .bloco2 {
+    width: 50%;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+    margin-bottom: 40px;
+    width: 10%;
+    width: 130%;
+  }
+  .heroText {
+    font-size: 18px;
+    margin-bottom: 60px;
+    width: 90%;
+  }
+  .contratarTitle {
+    font-size: 2.5rem;
+    width: 100%;
+    color: #333;
+    padding-left: 2.5rem;
+    text-align: left;
+  }
+  .contratarText {
+    font-size: 1.25rem;
+    font-weight: bold;
+    width: 70%;
+    color: #444;
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    text-align: left;
+  }
+  .stepConnector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 75%);
+    width: 2px;
+    background-color: #009688;
+    z-index: 1;
+    height: 160%;
+  }
+  .row:nth-last-child(3) .stepConnector {
+    height: 105%;
+    transform: translate(-50%, 115%);
+  }
+  .valueCard {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroTitle {
+    padding-top: 2rem;
+    display: flex;
+  }
+  .heroContent {
+    width: 70%;
+  }
+  .hero {
+    padding: 40px 10px;
+    background-position-x: -70%;
+  }
+  .howToApply {
+    padding: 40px 10px;
+  }
+  .advantages {
+    padding: 40px 10px;
+  }
+  .contratarTitle {
+    font-size: 2.5rem;
+  }
+  .stepContent {
+    margin-left: 30px;
+  }
+  .row {
+    margin-left: 30px;
+  }
+
+  .contratarText {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .form__p {
+    width: 70%;
+  }
+  .stepConnector {
+    display: none;
+  }
+
+  .heroText {
+    color: black;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 614px) {
+  .hero {
+    background-position-x: 0%;
+  }
+  .heroText {
+    width: 80%;
+  }
+  .btn {
+    width: 80%;
+  }
+  .img__whats {
+    margin-left: 0.5rem;
+  }
+  .valueCard {
+    width: 16rem;
+  }
+  .valueCardImg,
+  .valueCardImg2,
+  .valueCardImg3,
+  .valueCardImg4 {
+    width: 75px;
+  }
+  .howToApply {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn2 {
+    margin-bottom: 4rem;
+  }
+  .contratarText {
+    padding-bottom: 1rem;
+  }
+  .stepConnector {
+    display: none;
+  }
+  .form__p {
+    width: 90%;
+  }
 }

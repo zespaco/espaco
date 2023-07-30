@@ -176,11 +176,11 @@ export default function TrocaCredito() {
           <div className={styles.back}>
             <h2 className={styles.form__h1}>SEGURA, RÁPIDA E LEGALIZADA</h2>
             <p className={styles.form__p}>
-            A CCB (Cédula de Crédito Bancário) garante a segurança de um empréstimo pessoal transparente, tributado e 100% legalizado.
+              A CCB (Cédula de Crédito Bancário) garante a segurança de um
+              empréstimo pessoal transparente, tributado e 100% legalizado.
             </p>
           </div>
         </section>
-        {/* <Test></Test> */}
 
         <Faq pageType="troquecredito"></Faq>
       </div>

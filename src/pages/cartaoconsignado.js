@@ -10,7 +10,17 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function CartaoConsignado() {
   const scrollToForm = () => {
-    scroll.scrollTo(2100);
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1440) {
+      scroll.scrollTo(1950);
+    } else if (screenWidth === 1024) {
+      scroll.scrollTo(2400);
+    } else if (screenWidth === 768) {
+      scroll.scrollTo(3000);
+    } else {
+      scroll.scrollTo(3300);
+    }
   };
   return (
     <div>
@@ -33,7 +43,7 @@ export default function CartaoConsignado() {
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Cartão Consignado</h1>
             <p className={styles.heroText}>
-            Um cartão de crédito com opção de Saque até 70% do seu limite.
+              Um cartão de crédito com opção de Saque até 70% do seu limite.
             </p>
             <a
               target="._blank"
@@ -139,9 +149,7 @@ export default function CartaoConsignado() {
                 alt="Taxa de Juros Atrativas"
               ></div>
               <h3 className={styles.valueCardTitle}>Anuidade zero</h3>
-              <p className={styles.valueCardText}>
-              Cartão sem taxas anuais.
-              </p>
+              <p className={styles.valueCardText}>Cartão sem taxas anuais.</p>
             </div>
 
             <div className={styles.valueCard}>
@@ -176,7 +184,8 @@ export default function CartaoConsignado() {
           <div className={styles.back}>
             <h2 className={styles.form__h1}>Cartão consignado</h2>
             <p className={styles.form__p}>
-            Com o Cartão Consignado, você tem acesso imediato a crédito disponível para utilizar em momentos de urgência.
+              Com o Cartão Consignado, você tem acesso imediato a crédito
+              disponível para utilizar em momentos de urgência.
             </p>
           </div>
         </section>

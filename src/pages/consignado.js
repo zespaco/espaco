@@ -10,7 +10,17 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Consignado() {
   const scrollToForm = () => {
-    scroll.scrollTo(2100);
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1440) {
+      scroll.scrollTo(2000);
+    } else if (screenWidth === 1024) {
+      scroll.scrollTo(2450);
+    } else if (screenWidth === 768) {
+      scroll.scrollTo(3100);
+    } else {
+      scroll.scrollTo(4100);
+    }
   };
   return (
     <div>

@@ -10,7 +10,17 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Consorcio() {
   const scrollToForm = () => {
-    scroll.scrollTo(1850); 
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1440) {
+      scroll.scrollTo(1650);
+    } else if (screenWidth === 1024) {
+      scroll.scrollTo(2000);
+    } else if (screenWidth === 768) {
+      scroll.scrollTo(2600);
+    } else {
+      scroll.scrollTo(2900);
+    }
   };
   return (
     <div>
@@ -33,7 +43,7 @@ export default function Consorcio() {
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Consorcio</h1>
             <p className={styles.heroText}>
-            Realize seu sonho, invista no seu futuro.
+              Realize seu sonho, invista no seu futuro.
             </p>
             <a
               target="._blank"
@@ -70,7 +80,8 @@ export default function Consorcio() {
                 <div className={styles.stepContent}>
                   <h2 className={styles.stepTitle}>Preencha o formulário</h2>
                   <p className={styles.stepDescription}>
-                    Precisamos de alguns dados para fornecer o melhor investimento. É seguro e rápido. Clique em Simular
+                    Precisamos de alguns dados para fornecer o melhor
+                    investimento. É seguro e rápido. Clique em Simular
                     consórcio.
                   </p>
                 </div>
@@ -86,8 +97,8 @@ export default function Consorcio() {
                 <div className={styles.stepContent}>
                   <h2 className={styles.stepTitle}>Análise</h2>
                   <p className={styles.stepDescription}>
-                    Vamos analisar e buscar as proposta mais
-                    inteligente para você.
+                    Vamos analisar e buscar as proposta mais inteligente para
+                    você.
                   </p>
                 </div>
               </div>
@@ -118,7 +129,9 @@ export default function Consorcio() {
                 <div className={styles.stepContent}>
                   <h2 className={styles.stepTitle}>Resposta rápida</h2>
                   <p className={styles.stepDescription}>
-                  Após analisar seu pedido e obter a aprovação, você deu o primeiro passo para colher os frutos do seu investimento futuro com o consórcio.
+                    Após analisar seu pedido e obter a aprovação, você deu o
+                    primeiro passo para colher os frutos do seu investimento
+                    futuro com o consórcio.
                   </p>
                 </div>
               </div>
@@ -136,7 +149,8 @@ export default function Consorcio() {
               ></div>
               <h3 className={styles.valueCardTitle}>Diversidade de planos</h3>
               <p className={styles.valueCardText}>
-              Você escolhe a melhor opção com parcelas que caibam no seu bolso.
+                Você escolhe a melhor opção com parcelas que caibam no seu
+                bolso.
               </p>
             </div>
 
@@ -144,21 +158,25 @@ export default function Consorcio() {
               <div className={styles.valueCardImg2} alt="Segurança"></div>
               <h3 className={styles.valueCardTitle}>Segurança</h3>
               <p className={styles.valueCardText}>
-                Investimento utilizado exclusivamente para a aquisição do bem desejado.
+                Investimento utilizado exclusivamente para a aquisição do bem
+                desejado.
               </p>
             </div>
 
             <div className={styles.valueCard}>
-              <div className={styles.valueCardImg4} alt="Flexibilidade crédito"></div>
+              <div
+                className={styles.valueCardImg4}
+                alt="Flexibilidade crédito"
+              ></div>
               <h3 className={styles.valueCardTitle}>Flexibilidade crédito</h3>
               <p className={styles.valueCardText}>
-              Quando contemplado, adquira o bem da categoria ou receba em espécie.
+                Quando contemplado, adquira o bem da categoria ou receba em
+                espécie.
               </p>
             </div>
-           
           </div>
         </section>
-        
+
         <FormMain></FormMain>
 
         <Faq pageType="consorcio"></Faq>

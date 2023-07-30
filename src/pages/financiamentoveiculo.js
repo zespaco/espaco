@@ -9,7 +9,17 @@ import Faq from "@/components/Faq";
 import { Link, animateScroll as scroll } from "react-scroll";
 export default function FinanciamentoVeiculo() {
   const scrollToForm = () => {
-    scroll.scrollTo(1800); 
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1440) {
+      scroll.scrollTo(1700);
+    } else if (screenWidth === 1024) {
+      scroll.scrollTo(2150);
+    } else if (screenWidth === 768) {
+      scroll.scrollTo(2700);
+    } else {
+      scroll.scrollTo(3050);
+    }
   };
   return (
     <div>
@@ -32,8 +42,9 @@ export default function FinanciamentoVeiculo() {
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Financiamento de Veiculo</h1>
             <p className={styles.heroText}>
-              Realize seu sonho de ter um carro próprio! <br></br>Você pode conquistar a liberdade das
-              estradas de forma rápida e descomplicada.
+              Realize seu sonho de ter um carro próprio! <br></br>Você pode
+              conquistar a liberdade das estradas de forma rápida e
+              descomplicada.
             </p>
             <a
               target="._blank"
@@ -56,11 +67,7 @@ export default function FinanciamentoVeiculo() {
               Siga as instruções e aproveite.
             </p>
 
-            <a
-              className={styles.bloco2}
-              href="#form"
-              onClick={scrollToForm}
-            >
+            <a className={styles.bloco2} href="#form" onClick={scrollToForm}>
               <button className={styles.btn2}>Simular financiamento</button>
             </a>
           </div>
@@ -132,9 +139,7 @@ export default function FinanciamentoVeiculo() {
         </section>
 
         <section className={styles.advantages}>
-          <h2 className={styles.advantagesTitle}>
-            Vantagens de Financiar
-          </h2>
+          <h2 className={styles.advantagesTitle}>Vantagens de Financiar</h2>
           <div className={styles.valuesContainer}>
             <div className={styles.valueCard}>
               <div
@@ -142,16 +147,15 @@ export default function FinanciamentoVeiculo() {
                 alt="Taxa de Juros Atrativas"
               ></div>
               <h3 className={styles.valueCardTitle}>Praticidade</h3>
-              <p className={styles.valueCardText}>
-                Você escolhe .
-              </p>
+              <p className={styles.valueCardText}>Você escolhe .</p>
             </div>
 
             <div className={styles.valueCard}>
               <div className={styles.valueCardImg2} alt="Parcelas"></div>
               <h3 className={styles.valueCardTitle}>Parcelas</h3>
               <p className={styles.valueCardText}>
-              As parcelas são fixas e definidas por você no momento da contratação.
+                As parcelas são fixas e definidas por você no momento da
+                contratação.
               </p>
             </div>
 
@@ -159,14 +163,12 @@ export default function FinanciamentoVeiculo() {
               <div className={styles.valueCardImg3} alt="Prazo"></div>
               <h3 className={styles.valueCardTitle}>Prazo</h3>
               <p className={styles.valueCardText}>
-              Você escolhe a duração do seu contrato! Ele pode ter de 3 a 60 meses.
+                Você escolhe a duração do seu contrato! De 3 a 60 meses.
               </p>
             </div>
-   
-   
           </div>
         </section>
-      
+
         <FormMain></FormMain>
 
         <Faq pageType="financiamentoveiculo"></Faq>
