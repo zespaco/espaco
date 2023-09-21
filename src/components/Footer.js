@@ -14,7 +14,7 @@ const Footer = () => {
         </a>
         <div className={styles.groupfooter}>
           <div className={styles.links}>
-            <h3 className={styles.contato}>Entre em contato</h3>
+            <h3 className={styles.contato}>Contato</h3>
             <ul>
               <li>
                 <a

@@ -151,11 +151,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 115%);
+  transform: translate(-50%, 147%);
   width: 2px;
   background-color: #009688;
   z-index: 1;
-  height: 105%;
+  height: 83%;
 }
 
 .row:last-child .stepConnector {
@@ -442,5 +442,61 @@
   }
   .form__p {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero {
+    background-position-x: 46%;
+  }
+  .heroTitle {
+    padding-top: 0;
+  }
+  .heroContent {
+    padding: 0;
+  }
+  .heroText {
+    color: #333; /* Cor do texto */
+    text-shadow: 2px 2px 4px rgba(206, 206, 206, 0.3);
+    line-height: 1.5;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+  }
+  .btn {
+    padding: 15px 25px;
+    width: 90%;
+  }
+  .contratarTitle {
+    padding-left: 1rem;
+  }
+  .contratarText {
+    padding-left: 1rem;
+  }
+  .btn2 {
+    margin-left: 1rem;
+  }
+  .row {
+    padding-left: 1rem;
+    border: 1px solid rgba(179, 177, 177, 0.466);
+    border-radius: 25px;
+    margin: 1rem 0;
+    padding: 10px 15px;
+  }
+  .section {
+    padding: 20px;
+  }
+  .form__h1 {
+    padding-left: 0;
+  }
+  .form__p {
+    padding-left: 0;
+    width: 100%;
+  }
+  .back {
+    width: 100%;
   }
 }

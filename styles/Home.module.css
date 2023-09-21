@@ -1,11 +1,23 @@
 .header {
-  background-color: #009edf;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #0b6ddd;
+  width: 100%;
 }
-
+.testheader {
+  padding: 20px;
+}
+.backmain {
+  height: 100%;
+  width: 100%;
+}
+.aperte {
+  color: #00897b;
+  font-size: 0.85rem;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+}
+.contato {
+  padding-top: 1rem;
+}
 #logo {
   color: white;
   font-weight: bold;
@@ -13,7 +25,7 @@
   text-decoration: none;
   text-shadow: 1px 1px 4px #858383;
 
-  margin-left: 4rem;
+  margin-left: 3rem;
   text-align: center;
   line-height: 100%;
   margin-bottom: 10px;
@@ -31,34 +43,58 @@
 }
 
 .title__slide {
-  margin-bottom: 10px;
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 10px;
   color: #333;
 }
 .frase__slide {
   color: #333;
+  text-align: left;
+  width: 70%;
+  padding-top: 1rem;
+}
+.destaque__frase {
+  font-weight: bold;
 }
 .instituicao {
   font-weight: 600;
   font-size: 1rem;
   color: white;
 }
+.instituicao:active {
+  background-color: hidden;
+}
+.nav-link:focus,
+.nav-link:hover,
+.nav-link:active {
+  color: white;
+}
 
+.instituicao:hover {
+  color: white;
+}
 .hero {
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #95a5a625, #f4f4f4);
+
   text-align: center;
   padding: 40px;
   padding-top: -10px;
   padding-bottom: 60px;
   height: 100%;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .linha {
   display: flex;
   align-items: center;
-  padding: 0 10rem;
+  margin-top: 1rem;
+  justify-content: center;
+  width: 100%;
 }
 .bloco1 {
   margin-right: 7.5rem;
@@ -66,14 +102,25 @@
   flex-direction: column;
   align-items: center;
 }
-.bloco1 .linha2 {
+.linha2 {
   display: flex;
-  align-items: center;
-}
+  border: 1px solid #b9b9b960;
+  padding: 1rem;
 
+  border-radius: 5px;
+}
 .bloco2 {
+  margin-left: 10rem;
+  padding: 0.5rem 2rem;
+  background-color: #128c7e;
+  border-radius: 25px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* padding-left: 3rem; */
+}
+.conheca {
+  text-align: left;
 }
 
 .services {
@@ -89,6 +136,7 @@
   margin-bottom: 8px;
   font-weight: bold;
   color: #333333;
+  line-height: 1.6;
 }
 
 .card__description {
@@ -125,8 +173,8 @@
 }
 .toque {
   margin-right: 0.75rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 .card {
@@ -136,6 +184,7 @@
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(150, 150, 150, 0.3);
   margin: 20px;
   background-color: #f7f7f7;
   cursor: pointer;
@@ -163,7 +212,7 @@
 }
 
 .whats__tel {
-  color: #666;
+  color: #ffffff;
   font-size: 18px;
   line-height: 1.2;
   direction: ltr;
@@ -172,6 +221,118 @@
   width: 2.5rem;
   height: 2.5rem;
   margin-right: 1rem;
+}
+/* aq */
+.fast,
+.safe,
+.reliable {
+  margin: 0 5px;
+}
+
+.fast .svg-inline--fa,
+.safe .svg-inline--fa,
+.reliable .svg-inline--fa {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+.muitomais {
+  /* border-bottom: 2px solid rgb(96, 204, 93); */
+  color: #555;
+}
+.frase__slide {
+  margin-bottom: 0;
+  padding: 0;
+}
+.iconWrapper {
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid #3333333a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  width: 8rem;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #3498db;
+}
+
+.iconText {
+  font-weight: bold;
+  padding: 0 0.25rem;
+}
+
+.hero {
+  background-color: #fff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title__slide {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.frase__slide {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.destaque__frase {
+  color: #00a86b;
+  font-weight: bold;
+}
+.dropcolor {
+}
+.iconContainer {
+  display: flex;
+
+  justify-content: center;
+}
+
+.iconWrapper {
+  margin: 0 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #00aaff;
+  width: 1.25rem;
+  padding: 0.15rem 0;
+}
+
+.iconText {
+  margin-top: 5px;
+  font-size: 0.875rem;
+  color: #777;
+  margin: 0.15rem 0;
+}
+
+.bloco2 {
+  display: flex;
+}
+.whats__tel {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(243, 243, 243);
+  padding: 0.5rem 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -185,7 +346,12 @@
     margin-bottom: 20px;
   }
 }
-
+.titulo__service {
+  font-size: 2rem;
+  color: #333;
+  padding: 0rem 10rem;
+  padding-top: 1rem;
+}
 .titulos__services {
   display: flex;
 
@@ -255,10 +421,10 @@
 }
 
 .aas {
-  border-top: 1px solid #22222224;
+  /* border-top: 1px solid #22222224;
   border-bottom: 1px solid #22222224;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; */
 }
 .aas:first-child {
   margin-top: 0;
@@ -276,10 +442,6 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .header {
-    padding-left: -10px;
-    padding-right: -10px;
-  }
   .linha {
     flex-direction: column;
     align-items: center;
@@ -299,15 +461,6 @@
     padding: 10px;
   }
 
-  .header {
-    margin-left: -30px;
-    margin-right: -10px;
-  }
-
-  .frase__slide {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.267);
-    padding-bottom: 2rem;
-  }
   .linha {
     display: flex;
     flex-direction: row;
@@ -335,8 +488,8 @@
 }
 @media screen and (max-width: 614px) {
   .header {
-    margin-left: -40px;
-    margin-right: -40px;
+    /* margin-left: -40px;
+    margin-right: -40px; */
   }
   .card {
     width: calc(48.5% - 20px);
@@ -347,6 +500,9 @@
     padding-left: 0.5rem;
     justify-content: flex-start;
   }
+  .bloco2 {
+    width: 100%;
+  }
   .img__whats {
     width: 35px;
     height: 35px;
@@ -354,7 +510,10 @@
     margin-left: 20px;
   }
   .linha2 {
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .linha2__description {
     text-align: left;
@@ -370,4 +529,61 @@
   .card__content {
     padding: 0.75rem 0.75rem;
   }
+}
+@media screen and (max-width: 425px) {
+  #logo {
+    margin-left: 0rem;
+  }
+  .titulo__service {
+    padding: 30px;
+  }
+
+  .title__slide {
+    text-align: left;
+  }
+  .frase__slide {
+    width: 100%;
+    padding-top: 1rem;
+  }
+  .hero {
+    padding: 30px;
+  }
+  .linha {
+    flex-direction: column;
+  }
+  .bloco2 {
+    width: 100%;
+  }
+  .img__whats {
+    margin-left: 0;
+    margin-right: 0.25rem;
+  }
+  .whats__tel {
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  .card {
+    width: 70%;
+  }
+
+  .ofcanvagrid {
+    display: flex;
+  }
+  .instituicao {
+    text-align: left;
+    display: flex;
+    color: #333;
+  }
+  .instituicao:hover {
+    color: #333;
+  }
+  .iconContainer {
+    padding-top: 2rem;
+  }
+}
+.backhamburguer {
+  background-color: #f4f4f4;
+  width: 80%;
+  max-width: 350px;
 }

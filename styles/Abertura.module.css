@@ -12,6 +12,7 @@
   background-image: url(../src/image/abertura-cartao.webp);
   background-position-y: 20%;
   background-repeat: no-repeat;
+  
 }
 
 .hero::before {
@@ -446,5 +447,58 @@
   }
   .form__p {
     width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .hero {
+    background-position-x: 20%;
+
+  }
+  .heroTitle {
+    padding-top: 0;
+    margin-bottom: 1rem;
+  }
+  .heroContent {
+    padding: 0;
+  }
+  .heroText {
+    /* color: #333; */
+    line-height: 1.5;
+    text-align: left;
+    width: 90%;
+    padding-bottom: 2rem;
+  }
+  .btn {
+    padding: 15px 25px;
+    width: 90%;
+  }
+  .contratarTitle {
+    padding-left: 1rem;
+  }
+  .contratarText {
+    padding-left: 1rem;
+  }
+  .btn2 {
+    margin-left: 1rem;
+  }
+  .row {
+    padding-left: 1rem;
+    border: 1px solid rgba(179, 177, 177, 0.466);
+    border-radius: 25px;
+    margin: 1rem 0;
+    padding: 10px 15px;
+  }
+  .section {
+    padding: 20px;
+  }
+  .form__h1 {
+    padding-left: 0;
+  }
+  .form__p {
+    padding-left: 0;
+    width: 100%;
+  }
+  .back {
+    width: 100%;
   }
 }

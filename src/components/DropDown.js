@@ -20,7 +20,25 @@ export default function DropDown() {
     { key: "refinanciamentoveiculo", name: "Refinanciamento Veiculo" },
     { key: "consorcio", name: "Consorcio" },
   ];
-
+  const categorias = [
+    {
+      titulo: "Empréstimo",
+      itens: [
+        "Empréstimo consignado",
+        "Antecipação saque FGTS",
+        "Troca Crédito",
+        "Pessoal Inss",
+      ],
+    },
+    {
+      titulo: "Cartões",
+      itens: ["Cartão Beneficiário", "Abertura de Conta", "Cartão Consignado"],
+    },
+    {
+      titulo: "Veículo",
+      itens: ["Financiamento Veículo", "Refinanciamento Veículo", "Consórcio"],
+    },
+  ];
   const router = useRouter();
   return (
     <Dropdown>
@@ -28,37 +46,56 @@ export default function DropDown() {
         css={{
           fontWeight: "$semibold",
           fontSize: "1rem",
-          color:"white",
+          paddingLeft: "0",
+          marginLeft: "0",
+          justifyContent: "flex-start",
+          "@media (max-width: 425px)": {
+            color: "#333",
+          },
+          "@media (min-width: 426px)": {
+            color: "white",
+          },
         }}
         className={styles.instituicao}
         light
       >
-       Produtos
+        Produtos
       </Dropdown.Button>
-      <Dropdown.Menu css={
-              {
-               background:"#f0f0f04",
-              }
-            } className={styles.aa} aria-label="" items={menuItems}>
+
+      <Dropdown.Menu
+        css={{
+          background: "#f0f0f04",
+        }}
+        className={styles.aa}
+        aria-label=""
+        items={menuItems}
+      >
         {(item) => (
           <Dropdown.Item
-             key={item.key}
+            key={item.key}
             className={styles.aas}
-            css={
-              {
-                borderTop:"1px solid #22222224",
-                boxShadow:"0 2px 4px rgba(0, 0, 0, 0.1)",
-                borderBottom:"1px solid #22222224",
-                marginTop:"0.5rem",
-              }
-            }
+            css={{
+              borderBottom: "1px solid #e4e4e4",
+              padding: "0.5rem 1rem",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              transition: "background-color 0.2s ease-in-out",
+              backgroundColor: "white",
+              color: "#333",
+            }}
           >
-            <Link css={{
-          fontWeight: "$semibold",
-          fontSize: "1rem",
-          color:"black",
-          fontFamily: "$Lato sans-serif",
-        }} href={item.key}>{item.name}</Link>
+            <Link
+              css={{
+                fontWeight: "$semibold",
+                fontSize: "1rem",
+                color: "black",
+                fontFamily: "$Lato sans-serif",
+              }}
+              href={item.key}
+            >
+              {item.name}
+            </Link>
           </Dropdown.Item>
         )}
       </Dropdown.Menu>

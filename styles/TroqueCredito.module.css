@@ -11,6 +11,7 @@
   align-items: flex-start;
   background-image: url(../src/image/troque-credito.webp);
   background-repeat: no-repeat;
+  background-position-y: 45%;
 }
 
 .hero::before {
@@ -150,11 +151,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 115%);
+  transform: translate(-50%, 147%);
   width: 2px;
   background-color: #009688;
   z-index: 1;
-  height: 105%;
+  height: 83%;
 }
 
 .row:last-child .stepConnector {
@@ -345,11 +346,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 75%);
+    transform: translate(-50%, 147%);
     width: 2px;
     background-color: #009688;
     z-index: 1;
-    height: 160%;
+    height: 83%;
   }
   .row:nth-last-child(3) .stepConnector {
     height: 105%;
@@ -441,5 +442,59 @@
   }
   .form__p {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero {
+    background-position-x: 40%;
+
+  }
+  .heroTitle {
+    padding-top: 0;
+    margin-bottom: 1rem;
+  }
+  .heroContent {
+    padding: 0;
+  }
+  .heroText {
+    color: #333;
+    line-height: 1.5;
+    text-align: left;
+    width: 90%;
+    padding-bottom: 2rem;
+  }
+  .btn {
+    padding: 15px 25px;
+    width: 90%;
+  }
+  .contratarTitle {
+    padding-left: 1rem;
+  }
+  .contratarText {
+    padding-left: 1rem;
+  }
+  .btn2 {
+    margin-left: 1rem;
+  }
+  .row {
+    padding-left: 1rem;
+    border: 1px solid rgba(179, 177, 177, 0.466);
+    border-radius: 25px;
+    margin: 1rem 0;
+    padding: 10px 15px;
+  }
+  .section {
+    padding: 20px;
+  }
+  .form__h1 {
+    padding-left: 0;
+  }
+  .form__p {
+    padding-left: 0;
+    width: 100%;
+  }
+  .back {
+    width: 100%;
   }
 }

@@ -223,3 +223,19 @@
     margin-bottom: 0;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .form__h1,
+  .form__p,
+  .form__p2,
+  .privacy {
+    padding-left: 0;
+  }
+  .form__h1,
+  .privacy {
+    width: 110%;
+  }
+  .section {
+    width: 100%;
+  }
+}
